@@ -1,0 +1,24 @@
+{
+    "name": "leonardograsso/JobQueueExample",
+    "description": "JobQueue example module",
+    "homepage": "https://github.com/leonardograsso/JobQueueExample",
+    "repositories": [
+	        {
+	            "type": "vcs",
+	            "url": "https://github.com/loldev/ZendQueue"
+	        }
+	    ],
+    "require": {
+        "php": ">=5.4",
+        "zendframework/zendframework": ">=2.2",
+        "loldev/zend-queue" : "dev-master"
+    },
+    "autoload": {
+        "psr-0": {
+            "JobQueueExample": "src/"
+        },
+        "classmap": [
+            "./Module.php"
+        ]
+    }
+}
