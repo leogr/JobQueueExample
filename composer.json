@@ -8,6 +8,7 @@
 	            "url": "https://github.com/loldev/ZendQueue"
 	        }
 	    ],
+	"minimum-stability": "dev",
     "require": {
         "php": ">=5.4",
         "zendframework/zendframework": ">=2.2",
