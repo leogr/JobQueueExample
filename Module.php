@@ -4,7 +4,7 @@ namespace JobQueueExample;
 
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
-use Zend\Config\Processor\Queue;
+use ZendQueue\Queue\Queue;
 use JobQueueExample\Controller\WorkerController;
 
 class Module
