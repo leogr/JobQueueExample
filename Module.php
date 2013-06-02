@@ -4,6 +4,7 @@ namespace JobQueueExample;
 
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
+use Zend\Config\Processor\Queue;
 
 class Module
 {
@@ -34,7 +35,9 @@ class Module
     {
         return array(
             'factories' => array(
-
+                'JobQueueExample\Controller\Worker' => function(\Zend\Mvc\Controller\ControllerManager $sm) {
+                    return new Worker($sm->getServiceLocator()->get('mongo-capped-queue'));
+                },
             ),
         );
     }
@@ -43,6 +46,27 @@ class Module
     {
         return array(
             'factories' => array(
+                'db-queue' => function($sm) {
+                    $config = $sm->get('config');
+                    $queue = new Queue('default', 'db', array(
+                        'driverOptions' 	=> $config['db']
+                    ));
+                    return $queue;
+                },
+                'mongo-queue' => function($sm) {
+                    $config = $sm->get('config');
+                    $queue = new Queue('default', 'MongoCollection', array(
+                        'driverOptions' 	=> $config['mongodb']
+                    ));
+                    return $queue;
+                },
+                'mongo-capped-queue' => function($sm) {
+                    $config = $sm->get('config');
+                    $queue = new Queue('default', 'MongoCappedCollection', array(
+                        'driverOptions' 	=> $config['mongodb']
+                    ));
+                    return $queue;
+                },
 
              ),
         );
