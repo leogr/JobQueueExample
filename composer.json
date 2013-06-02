@@ -11,9 +11,11 @@
 	"minimum-stability": "dev",
     "require": {
         "php": ">=5.4",
-        "zendframework/zendframework": ">=2.2",
-        "loldev/zend-queue" : "dev-master"
+        "zendframework/zendframework": ">=2.2"
     },
+    "require-dev": {
+    	"loldev/zend-queue" : "@dev"
+    }
     "autoload": {
         "psr-0": {
             "JobQueueExample": "src/"
