@@ -1,7 +1,6 @@
 <?php
 use Zend\ServiceManager\ServiceManager;
 use Zend\Mvc\Application;
-use JobQueueExample;
 
 ini_set('display_errors', true);
 chdir(__DIR__);

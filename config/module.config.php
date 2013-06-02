@@ -18,7 +18,7 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-            'JobQueueExample\Controller\Example' => 'JobQueueExample\Controller\ExampleController'
+            'JobQueueExample\Controller\Example' => 'JobQueueExample\Controller\ExampleController',
         ),
     ),
 

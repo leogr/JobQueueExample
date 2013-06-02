@@ -5,6 +5,7 @@ namespace JobQueueExample;
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
 use Zend\Config\Processor\Queue;
+use JobQueueExample\Controller\WorkerController;
 
 class Module
 {
@@ -36,7 +37,7 @@ class Module
         return array(
             'factories' => array(
                 'JobQueueExample\Controller\Worker' => function(\Zend\Mvc\Controller\ControllerManager $sm) {
-                    return new Worker($sm->getServiceLocator()->get('mongo-capped-queue'));
+                    return new WorkerController($sm->getServiceLocator()->get('mongo-capped-queue'));
                 },
             ),
         );
