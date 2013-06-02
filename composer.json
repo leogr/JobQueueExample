@@ -9,12 +9,12 @@
 	        }
 	    ],
 	"minimum-stability": "dev",
-    "require": {
-        "php": ">=5.4",
-        "zendframework/zendframework": ">=2.2"
-    },
+	"require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": ">2.2.0rc1"
+    }
     "require-dev": {
-    	"loldev/zend-queue" : "@dev"
+    	"loldev/zend-queue" : "dev-develop"
     },
     "autoload": {
         "psr-0": {
