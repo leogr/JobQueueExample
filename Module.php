@@ -63,7 +63,7 @@ class Module
                 },
                 'mongo-capped-queue' => function($sm) {
                     $config = $sm->get('config');
-                    $queue = new Queue('default', 'MongoCappedCollection', array(
+                    $queue = new Queue('defaultCapped', 'MongoCappedCollection', array(
                         'driverOptions' 	=> $config['mongodb']
                     ));
                     return $queue;
