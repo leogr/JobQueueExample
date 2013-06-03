@@ -24,7 +24,8 @@ class ExampleController extends AbstractActionController
 
     public function senderAction()
     {
-        $this->queue('mongo-capped-queue')->forward('JobQueueExample\Controller\Example', array(
+        $queue = $this->getServiceLocator()->get('mongo-capped-queue');
+        $this->queue($queue)->forward('JobQueueExample\Controller\Example', array(
            'action' => 'receiver',
            'time'   => microtime(true)
         ));
