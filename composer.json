@@ -11,7 +11,7 @@
 	"minimum-stability": "dev",
 	"require": {
         "php": ">=5.3.3",
-        "zendframework/zendframework": ">2.2.0rc1"
+        "zendframework/zendframework": "2.2.*"
     },
     "require-dev": {
     	"loldev/zend-queue" : "dev-develop"
@@ -23,5 +23,8 @@
         "classmap": [
             "./Module.php"
         ]
-    }
+    },
+    "bin": [
+        "bin/job-queue-module"
+    ]
 }

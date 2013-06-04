@@ -8,7 +8,7 @@ class ExampleController extends AbstractActionController
 
     public function testAction()
     {
-        return "It's works!";
+        return "It's works!\n";
     }
 
 
