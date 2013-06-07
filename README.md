@@ -34,11 +34,11 @@ Add to your composer.json
     	"bin-dir": "bin"
     }
 
-Then, update composer (with --dev):
+Then, update composer (using --dev):
 
 	php composer.phar update --dev
 
-Finally, add this module to your's app config/application.config.php:
+Finally, add this module to your app (in config/application.config.php):
 
 	<?php
 	return array(
