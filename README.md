@@ -12,7 +12,7 @@ Install ZendSkeletonApplication using composer:
 
 or use your own ZF2 application (composer is required).
 
-Then, add to your composer.json
+Add to your composer.json
 
     "repositories": [
 	        {
@@ -34,6 +34,20 @@ Then, add to your composer.json
     	"bin-dir": "bin"
     }
 
-Finally, update composer (with --dev):
+Then, update composer (with --dev):
 
 	php composer.phar update --dev
+
+Finally, add this module to your's app config/application.config.php:
+
+	<?php
+	return array(
+	    // This should be an array of module namespaces used in the application.
+	    'modules' => array(
+	        'Application', 'JobQueueExample'
+	    ),
+
+Usage
+-------------
+
+TBD
