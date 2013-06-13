@@ -61,14 +61,6 @@ class Module
                     ));
                     return $queue;
                 },
-                'mongo-capped-queue' => function($sm) {
-                    $config = $sm->get('config');
-                    $queue = new Queue('defaultCapped', 'MongoCappedCollection', array(
-                        'driverOptions' 	=> $config['mongodb']
-                    ));
-                    return $queue;
-                },
-
              ),
         );
     }
