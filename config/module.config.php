@@ -37,6 +37,7 @@ return array(
 
     'queue_adapters' => array(
         'ZendQueue\Adapter\MongoCappedCollection' => array(
+            'adapter'       => 'ZendQueue\Adapter\MongoCappedCollection',
             'driverOptions' => array(
                 //Add your config in local.php!
                 //'host' 				 => '',
