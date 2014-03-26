@@ -1,5 +1,7 @@
-JobQueueExample
+JobQueueExample [DEPRECATED]
 ===============
+
+Please see new refactor of ZendQueue [here](https://github.com/ripaclub/ZendQueue/tree/develop)
 
 
 Install
